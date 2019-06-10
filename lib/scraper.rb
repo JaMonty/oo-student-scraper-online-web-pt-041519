@@ -40,8 +40,8 @@ class Scraper
         stud[:blog] = link
       end
     end
+        stud[:profile_quote] = p_page.css(".profile-quote").text if p_page.css(".profile-quote")
 
-       stud[:profile_quote] = p_page.css(".profile-quote").text if p_page.css(".profile-quote")
        stud[:bio] = p_page.css("div.bio-content.content-holder div.description-holder p").text if p_page.css("div.bio-content.content-holder div.description-holder p")
 
     stud
